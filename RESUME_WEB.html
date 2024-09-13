@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume Parehhh</title>
+    
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #18191a;
+            margin: 0;
+            padding: 0;
+            color: #ccc;
+        }
+
+        /* Container */
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #242526;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Background image placeholder */
+        .background-img {
+            width: 100%;
+            height: 200px;
+            background-color: #333;
+            background-position: center;
+            background-size: cover;
+        }
+
+        /* Profile section */
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+            padding-top: 20px;
+            position: relative;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #444;
+            display: block;
+            margin: -80px auto 10px auto;
+            border: 5px solid #18191a;
+        }
+
+        /* Circular motion animation */
+        .animated-border {
+            position: relative;
+            border: 3px solid transparent;
+            border-radius: 10px;
+            animation: neon-border 5s linear infinite;
+        }
+
+        /* Different neon colors for each section */
+        .name {
+            margin: 0;
+            font-size: 2em;
+            color: #00ffe5;
+            text-shadow: 0 0 10px #00ffe5;
+            position: relative;
+            animation: rotate-glow 3s linear infinite;
+        }
+
+        .title {
+            margin: 5px 0;
+            font-size: 1.2em;
+            color: #f0f0f0;
+        }
+
+        .contact-info {
+            margin: 5px 0;
+            color: #999;
+        }
+
+        /* Section headers with neon glow and icons */
+        section h2 {
+            background-color: #1877f2;
+            color: #f032e6;
+            padding: 10px;
+            cursor: pointer;
+            margin: 0;
+            font-size: 1.5em;
+            text-shadow: 0 0 8px #f032e6;
+            transition: color 0.3s, text-shadow 0.3s;
+            position: relative;
+            display: flex;
+            align-items: center;
+            animation: rotate-glow 5s linear infinite;
+        }
+
+        section h2 i {
+            margin-right: 10px;
+        }
+
+        section h2:hover {
+            color: #fff;
+            text-shadow: 0 0 20px #f032e6, 0 0 10px #f032e6;
+        
+
+        /* Experience, education, skills placeholders */
+        .experience, .education {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .company-logo, .school-logo {
+            width: 60px;
+            height: 60px;
+            background-color: #555;
+            border-radius: 50%;
+        }
+
+        .experience-details, .education-details {
+            flex-grow: 1;
+            color: #eee;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            padding: 5px 0;
+            border-bottom: 1px solid #333;
+            color: #b8b8b8;
+        }
+
+        /* Neon Button with animated border */
+        .proceed-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #242526;
+            color: #ffdd00;
+            font-size: 1.2em;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            cursor: pointer;
+            text-shadow: 0 0 10px #ffdd00;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+            animation: neon-border 5s linear infinite;
+        }
+
+        .proceed-button:hover {
+            background-color: #ffdd00;
+            color: #242526;
+            box-shadow: 0 0 20px #ffdd00, 0 0 40px #ffdd00;
+            transform: scale(1.05);
+        }
+
+        /* Section animations */
+        .section-content.show {
+            display: block;
+            animation: fadeIn 0.7s ease;
+        }
+
+        /* Fade in effect */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Neon rotating glow effect */
+        @keyframes rotate-glow {
+            0% {
+                text-shadow: 0 0 8px #00ffe5, 0 0 20px #00ffe5;
+            }
+            50% {
+                text-shadow: 0 0 15px #00ff5e, 0 0 40px #00ff5e;
+            }
+            100% {
+                text-shadow: 0 0 8px #00ffe5, 0 0 20px #00ffe5;
+            }
+        }
+
+        /* Circular border animation for buttons */
+        @keyframes neon-border {
+            0% {
+                border-color: #ffdd00;
+                box-shadow: 0 0 8px #ffdd00, inset 0 0 10px #ffdd00;
+            }
+            50% {
+                border-color: #ff0080;
+                box-shadow: 0 0 12px #ff0080, inset 0 0 20px #ff0080;
+            }
+            100% {
+                border-color: #ffdd00;
+                box-shadow: 0 0 8px #ffdd00, inset 0 0 10px #ffdd00;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    <!-- Background image placeholder -->
+    <div style="width: 100%; height: 300px; background-image: url('https://i.ibb.co/r64vjrD/FB-IMG-1686197265207.jpg'); background-size: cover; background-position: center; border: 0;">
+    </div>
+</div>
+
+       <header>
+    <div style="width: 150px; height: 150px; border-radius: 50%; overflow: hidden; margin: -80px auto 10px auto; border: 5px solid #18191a;">
+        <img src="https://i.ibb.co/xJn9PVS/IMG-20230912-192136.jpg" alt="Profile Image" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+    <h1 class="name animated-border">Jhazen Parinas</h1>
+    <p class="title">Web Developer</p>
+    <p class="contact-info">Email: jcparinas@paterostechnologicalcollege.edu.ph | Phone:09451400406 | LinkedIn: linkedin.com/in/jhazen-parinas-130a05274 </p>
+</header>
+
+
+       <section style="position: relative; background-image: url('https://i.ibb.co/dWN9CcJ/c364a253038241-5925ad7e543c0.gif'); background-size: cover; background-position: center; padding: 20px; margin: 20px 0; color: #fff; border-radius: 8px; overflow: hidden;">
+
+    <h2 onclick="toggleSection('experience-section')" style="color: #00ffe5; text-shadow: 0 0 10px #00ffe5; cursor: pointer; transition: color 0.3s, text-shadow 0.3s;">
+
+
+        <i class="fas fa-briefcase"></i> Achievements and Experience
+    </h2>
+    <div id="experience-section" style="background: rgba(0, 0, 0, 0.6); padding: 20px; border-radius: 8px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);">
+        <div class="experience" style="display: flex; gap: 10px; margin-bottom: 10px;">
+
+           <div class="company-logo" style="width: 60px; height: 60px; background-image: url('https://i.ibb.co/HxH7Dbr/1726262993657.jpg'); background-size: cover; background-position: center; border-radius: 50%; background-color: #555; overflow: hidden;">
+    </div> <!-- Placeholder for company logo -->
+
+            <div class="experience-details" style="flex-grow: 1; color: #eee;">
+
+
+                <h3>Web Design 1st Runner Up</h3>
+                <h4>Pateros Technological College</h4>
+                <p>IT Olympics - June 2023</p>
+                <ul style="list-style-type: none; padding-left: 0;">
+                    <li style="padding: 5px 0; border-bottom: 1px solid #333; color: #b8b8b8;">Developed and maintained web applications using HTML, CSS, and JavaScript.</li>
+                    <li style="padding: 5px 0; border-bottom: 1px solid #333; color: #b8b8b8;"> Achieved 1st Runner-Up in the IT Olympics at Pateros Technological College, demonstrating strong technical skills and problem-solving abilities in a competitive environment.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="experience" style="display: flex; gap: 10px; margin-bottom: 10px;">
+
+            <div class="company-logo" style="width: 60px; height: 60px; background-image: url('https://i.ibb.co/Gd6cfQL/OIP.jpg'); background-size: cover; background-position: center; border-radius: 50%; background-color: #555; overflow: hidden;">
+</div> <!-- Placeholder for company logo -->
+
+            <div class="experience-details" style="flex-grow: 1; color: #eee;">
+
+
+                <h3>Service Crew</h3>
+                <h4>McDonald's Market Market</h4>
+                <p> September 2023 - May 2024</p>
+                <ul style="list-style-type: none; padding-left: 0;">
+                    <li style="padding: 5px 0; border-bottom: 1px solid #333; color: #b8b8b8;">Provided exceptional customer service, efficiently managed orders, and maintained a clean and organized work environment in a fast-paced setting. </li>
+                    <li style="padding: 5px 0; border-bottom: 1px solid #333; color: #b8b8b8;">Demonstrated strong teamwork and communication skills while contributing to a positive dining experience for customers.</li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+
+<style>
+    @keyframes neon-border {
+        0% {
+            border-color: #ffdd00;
+            box-shadow: 0 0 8px #ffdd00, inset 0 0 10px #ffdd00;
+        }
+        50% {
+            border-color: #ff0080;
+            box-shadow: 0 0 12px #ff0080, inset 0 0 20px #ff0080;
+        }
+        100% {
+            border-color: #ffdd00;
+            box-shadow: 0 0 8px #ffdd00, inset 0 0 10px #ffdd00;
+        }
+    }
+</style>
+
+
+       <section style="position: relative; background-image: url('https://i.ibb.co/w6PnyH1/giphy.gif'); background-size: cover; background-position: center; padding: 20px; margin: 20px 0; color: #fff;">
+
+    <h2 onclick="toggleSection('education-section')">
+        <i class="fas fa-graduation-cap"></i> Education
+    </h2>
+
+    <div id="education-section" style="background: rgba(0, 0, 0, 0.6); padding: 20px; border-radius: 8px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);">
+
+ <div class="company-logo" style="width: 60px; height: 60px; background-image: url('https://i.ibb.co/C731sRq/images-7.jpg'); background-size: cover; background-position: center; border-radius: 50%; background-color: #555; overflow: hidden;">
+    </div> <!-- Placeholder for company logo -->
+
+
+        <div class="education-details" style="flex-grow: 1; color: #eee;">
+                <h3>Bachelor of Science in Information Technology</h3>
+                <h4>Pateros Technological College</h4>
+                <p>2022 - 2024</p>
+
+            </div>
+        </div>
+
+       
+    </div>
+</section>
+
+<style>
+    @keyframes neon-border {
+        0% {
+            border-color: #ffdd00;
+            box-shadow: 0 0 8px #ffdd00, inset 0 0 10px #ffdd00;
+        }
+        50% {
+            border-color: #ff0080;
+            box-shadow: 0 0 12px #ff0080, inset 0 0 20px #ff0080;
+        }
+        100% {
+            border-color: #ffdd00;
+            box-shadow: 0 0 8px #ffdd00, inset 0 0 10px #ffdd00;
+        }
+    }
+</style>
+
+
+        <section style="position: relative; background-image: url('https://i.ibb.co/rvMWDXp/50d5c24612e1ee28066c5bc64979856d.gif'); background-size: cover; background-position: center; padding: 20px; margin: 20px 0; color: #fff;">
+    <h2 onclick="toggleSection('skills-section')" style="color: #00ffe5; text-shadow: 0 0 10px #00ffe5; cursor: pointer; transition: color 0.3s, text-shadow 0.3s;">
+        <i class="fas fa-tools"></i> Skills
+    </h2>
+    <div id="skills-section" style="background: rgba(0, 0, 0, 0.6); padding: 20px; border-radius: 8px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);">
+        <ul style="list-style-type: none; padding-left: 0;">
+            <li style="padding: 5px 0; color: #eee; border-bottom: 1px solid #333;">HTML & CSS</li>
+            <li style="padding: 5px 0; color: #eee; border-bottom: 1px solid #333;">JavaScript</li>
+            <li style="padding: 5px 0; color: #eee; border-bottom: 1px solid #333;">React</li>
+            <li style="padding: 5px 0; color: #eee;">Git & GitHub</li>
+        </ul>
+        
+    </div>
+</section>
+
+<style>
+    @keyframes neon-border {
+        0% {
+            border-color: #ffdd00;
+            box-shadow: 0 0 8px #ffdd00, inset 0 0 10px #ffdd00;
+        }
+        50% {
+            border-color: #ff0080;
+            box-shadow: 0 0 12px #ff0080, inset 0 0 20px #ff0080;
+        }
+        100% {
+            border-color: #ffdd00;
+            box-shadow: 0 0 8px #ffdd00, inset 0 0 10px #ffdd00;
+        }
+    }
+</style>
+
+    </div>
+
+    <script>
+        // Toggle section visibility
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.classList.toggle('show');
+        }
+
+        // Proceed button functionality
+        function nextSection() {
+            alert('Proceeding to the next section!');
+        }
+    </script>
+
+</body>
+
+</html>
